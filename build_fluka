@@ -2,6 +2,8 @@
 
 # Build script to build Fluka with the GCR Source, assumes you are building in place
 
+HDF5_PATH=$1
+
 if [ -z $FLUPRO ] ; then
    echo "The FLUPRO environment isnt set, do you have Fluka installed?"
    exit
