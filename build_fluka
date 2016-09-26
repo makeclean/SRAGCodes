@@ -36,4 +36,4 @@ cp RadSource/source.f .
 $FLUPRO/flutil/ldpmqmd -m fluka -L/$SRAGCODE_DIR/lib -a gcrsource -a stdc++ -L/$HDF5_PATH/lib -ahdf5 -adl -o flukahp source.f
 # cleanup
 rm source.f
-rm source.o
+# rm source.o
