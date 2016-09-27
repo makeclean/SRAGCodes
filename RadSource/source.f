@@ -243,6 +243,8 @@
       XFLK   (NPFLKA) = XBEAM
       YFLK   (NPFLKA) = YBEAM
       ZFLK   (NPFLKA) = ZBEAM
+      WRITE(*,*) XBEAM,YBEAM,ZBEAM,F_ERG,IONID,IPROA,IPROZ,IPROM 
+
 *  Calculate the total kinetic energy of the primaries: don't change
       IF ( ILOFLK (NPFLKA) .EQ. -2 .OR. ILOFLK (NPFLKA) .GT. 100000 )
      &   THEN
