@@ -47,15 +47,15 @@ void CParticleState::SetParticleID(int iParticleID, double random) {
   // set the particle id - equivalent to the charge number
   m_iParticleID = iParticleID;
 
-  pyne::comp_map comp;
+  nasa_pyne::comp_map comp;
   comp[m_iParticleID*10000000] = 1.0;
 
-  pyne::Material mat = pyne::Material(comp);
+  nasa_pyne::Material mat = nasa_pyne::Material(comp);
   mat = mat.expand_elements();
   nucid = mat.sampler(random,"atom");
-  charge = pyne::nucname::znum(nucid);
-  nucleon_number = pyne::nucname::anum(nucid);
-  atomic_mass = pyne::atomic_mass(nucid);
+  charge = nasa_pyne::nucname::znum(nucid);
+  nucleon_number = nasa_pyne::nucname::anum(nucid);
+  atomic_mass = nasa_pyne::atomic_mass(nucid);
 }
 
 

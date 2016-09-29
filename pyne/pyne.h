@@ -113,7 +113,7 @@
 #endif
 
 /// The 'pyne' namespace all PyNE functionality is included in.
-namespace pyne {
+namespace nasa_pyne {
 
   void pyne_start (); ///< Initializes PyNE based on environment.
 
@@ -802,7 +802,7 @@ namespace h5wrap
 #include "utils.h"
 #endif
 
-namespace pyne
+namespace nasa_pyne
 {
 //! Nuclide naming conventions
 namespace nucname
@@ -892,7 +892,7 @@ namespace nucname
     NotANuclide(std::string wasptr, int nowptr)
     {
       nucwas = wasptr;
-      nucnow = pyne::to_str(nowptr);
+      nucnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor given previous and current state of nulide name
@@ -900,7 +900,7 @@ namespace nucname
     /// \param nowptr Current state, as far as PyNE could get.
     NotANuclide(int wasptr, std::string nowptr)
     {
-      nucwas = pyne::to_str(wasptr);
+      nucwas = nasa_pyne::to_str(wasptr);
       nucnow = nowptr;
     };
 
@@ -909,8 +909,8 @@ namespace nucname
     /// \param nowptr Current state, as far as PyNE could get.
     NotANuclide(int wasptr, int nowptr)
     {
-      nucwas = pyne::to_str(wasptr);
-      nucnow = pyne::to_str(nowptr);
+      nucwas = nasa_pyne::to_str(wasptr);
+      nucnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Generates an informational message for the exception
@@ -960,7 +960,7 @@ namespace nucname
     IndeterminateNuclideForm(std::string wasptr, int nowptr)
     {
       nucwas = wasptr;
-      nucnow = pyne::to_str(nowptr);
+      nucnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor given previous and current state of nulide name
@@ -968,7 +968,7 @@ namespace nucname
     /// \param nowptr Current state, as far as PyNE could get.
     IndeterminateNuclideForm(int wasptr, std::string nowptr)
     {
-      nucwas = pyne::to_str(wasptr);
+      nucwas = nasa_pyne::to_str(wasptr);
       nucnow = nowptr;
     };
 
@@ -977,8 +977,8 @@ namespace nucname
     /// \param nowptr Current state, as far as PyNE could get.
     IndeterminateNuclideForm(int wasptr, int nowptr)
     {
-      nucwas = pyne::to_str(wasptr);
-      nucnow = pyne::to_str(nowptr);
+      nucwas = nasa_pyne::to_str(wasptr);
+      nucnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Generates an informational message for the exception
@@ -1420,7 +1420,7 @@ namespace nucname
 /// Number of reactions supported by default.
 #define NUM_RX_NAMES 572
 
-namespace pyne
+namespace nasa_pyne
 {
 //! Converts between naming conventions for reaction channels.
 namespace rxname
@@ -1625,14 +1625,14 @@ namespace rxname
     NotAReaction(std::string wasptr, int nowptr)
     {
       rxwas = wasptr;
-      rxnow = pyne::to_str(nowptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor using original reaction (\a wasptr) and the eventual state
     /// that PyNE calculated (\a nowptr).
     NotAReaction(int wasptr, std::string nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
+      rxwas = nasa_pyne::to_str(wasptr);
       rxnow = nowptr;
     };
 
@@ -1640,8 +1640,8 @@ namespace rxname
     /// that PyNE calculated (\a nowptr).
     NotAReaction(int wasptr, int nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
-      rxnow = pyne::to_str(nowptr);
+      rxwas = nasa_pyne::to_str(wasptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor using original reaction (\a wasptr) and the eventual state
@@ -1649,14 +1649,14 @@ namespace rxname
     NotAReaction(std::string wasptr, unsigned int nowptr)
     {
       rxwas = wasptr;
-      rxnow = pyne::to_str(nowptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor using original reaction (\a wasptr) and the eventual state
     /// that PyNE calculated (\a nowptr).
     NotAReaction(unsigned int wasptr, std::string nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
+      rxwas = nasa_pyne::to_str(wasptr);
       rxnow = nowptr;
     };
 
@@ -1664,8 +1664,8 @@ namespace rxname
     /// that PyNE calculated (\a nowptr).
     NotAReaction(unsigned int wasptr, unsigned int nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
-      rxnow = pyne::to_str(nowptr);
+      rxwas = nasa_pyne::to_str(wasptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Returns a helpful error message containing prior and current reaction state.
@@ -1714,14 +1714,14 @@ namespace rxname
     IndeterminateReactionForm(std::string wasptr, int nowptr)
     {
       rxwas = wasptr;
-      rxnow = pyne::to_str(nowptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Constructor using original reaction (\a wasptr) and the eventual state
     /// that PyNE calculated (\a nowptr).
     IndeterminateReactionForm(int wasptr, std::string nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
+      rxwas = nasa_pyne::to_str(wasptr);
       rxnow = nowptr;
     };
 
@@ -1729,8 +1729,8 @@ namespace rxname
     /// that PyNE calculated (\a nowptr).
     IndeterminateReactionForm(int wasptr, int nowptr)
     {
-      rxwas = pyne::to_str(wasptr);
-      rxnow = pyne::to_str(nowptr);
+      rxwas = nasa_pyne::to_str(wasptr);
+      rxnow = nasa_pyne::to_str(nowptr);
     };
 
     /// Returns a helpful error message containing prior and current reaction state.
@@ -1770,7 +1770,7 @@ namespace rxname
 /// \/brief Impliments all the fundamental atomic & nuclear data data
 #include <map>
 
-namespace pyne
+namespace nasa_pyne
 {
   /// main function to be called when you whish to load the nuclide data 
   /// into memory 
@@ -1793,7 +1793,7 @@ namespace pyne
   /// Mapping from nuclides in id form to the associated error in 
   /// abdundance 
   extern std::map<int,double> atomic_mass_error_map;
-} // namespace pyne
+} // namespace nasa_pyne
 //
 // end of src/_atomic_data.h
 //
@@ -1832,7 +1832,7 @@ namespace pyne
 #include "rxname.h"
 #endif
 
-namespace pyne
+namespace nasa_pyne
 {
   /// \name Mathematical and Physical Constants
   /// \{
@@ -2515,7 +2515,7 @@ namespace pyne
     std::string msg_;
   };
 
-} // namespace pyne
+} // namespace nasa_pyne
 
 #endif
 //
@@ -4772,7 +4772,7 @@ namespace Json {
 #include "decay.h"
 #endif
 
-namespace pyne
+namespace nasa_pyne
 {
   // Set Type Definitions
   typedef std::map<int, double> comp_map; ///< Nuclide-mass composition map type
@@ -4994,7 +4994,7 @@ namespace pyne
     Material collapse_elements(std::set<int> exception_znum);
     // Wrapped version to facilitate calling from python
     Material collapse_elements(int **int_ptr_arry);
-    // void print_material( pyne::Material test_mat);
+    // void print_material( nasa_pyne::Material test_mat);
     /// Computes, sets, and returns the mass density when \a num_dens is greater
     /// than or equal zero.  If \a num_dens is negative, this simply returns the
     /// current value of the density member variable.  You may also use / set the
@@ -5148,7 +5148,7 @@ namespace pyne
 /*** Enrichment Component Class and Functions ***/
 /************************************************/
 
-namespace pyne {
+namespace nasa_pyne {
 namespace enrichment {
 
   /// A set of physical parameters used to specify an enrichment cascade.
@@ -5177,9 +5177,9 @@ namespace enrichment {
     double x_prod_j; ///< enrichment of the #j-th isotope in the product stream
     double x_tail_j; ///< enrichment of the #j-th isotope in the tails stream
 
-    pyne::Material mat_feed; ///< feed material
-    pyne::Material mat_prod; ///< product material
-    pyne::Material mat_tail; ///< tails material
+    nasa_pyne::Material mat_feed; ///< feed material
+    nasa_pyne::Material mat_prod; ///< product material
+    nasa_pyne::Material mat_tail; ///< tails material
 
     double l_t_per_feed; ///< Total flow rate per feed rate.
     double swu_per_feed; ///< This is the SWU for 1 kg of Feed material.
@@ -5221,7 +5221,7 @@ namespace enrichment {
 /*** Enrichment Component Class and Functions ***/
 /************************************************/
 
-namespace pyne {
+namespace nasa_pyne {
 //! Enrichment Component Class and Functions
 namespace enrichment {
 
@@ -5394,7 +5394,7 @@ namespace enrichment {
 #include "enrichment_cascade.h"
 #endif
 
-namespace pyne {
+namespace nasa_pyne {
 namespace enrichment {
 
   /// A multicomponent enrichment cascade solver using     
@@ -5439,7 +5439,7 @@ namespace enrichment {
 #include "nucname.h"
 #endif
 
-namespace pyne {
+namespace nasa_pyne {
 namespace decayers {
 
 extern const int all_nucs[4];
@@ -5447,7 +5447,7 @@ extern const int all_nucs[4];
 std::map<int, double> decay(std::map<int, double> comp, double t);
 
 }  // namespace decayers
-}  // namespace pyne
+}  // namespace nasa_pyne
 
 #endif  // PYNE_GEUP5PGEJBFGNHGI36TRBB4WGM
 #endif  // PYNE_DECAY_IS_DUMMY//
